@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+  {{> favicon}}
+  {{> css}}
+</head>
+
+<body>
+  {{> header}}
+  <div class="container-fluid p-0">
+    <div class="row">
+      <div class="col">
+        <div class="jumbotron jumbotron-fluid"
+          style="background-image: url('img/contact.jpg');background-position:center;background-size:cover;height:600px;">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+            <h1 class="h1">Contact Us</h1>
+            <form id="contact-form" class="p-4">
+              <div class="form-row">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" class="form-control" id="first-name" name="firstName" required/>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" class="form-control" id="last-name" name="lastName" required/>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" class="form-control" id="phone" name="phone" placeholder="xxx-xxx-xxxx" required/>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required/>
+              </div>
+              <div class="form-group">
+                <label for="referralSource">How did you hear about us?</label>
+                <select name="referralSource" id="referral-source" class="form-control" required>
+                  <option value="">Please choose an option</option>
+                  <option value="current or past resident">Current or Past Resident</option>
+                  <option value="drive by">Drive By</option>
+                  <option value="event">Event</option>
+                  <option value="facebook">Facebook</option>
+                  <option value="friend">Friend</option>
+                  <option value="internet advertising">Internet Advertising</option>
+                  <option value="radio advertising">Radio Advertising</option>
+                  <option value="referral">Referral</option>
+                  <option value="tv commercial">TV Commercial</option>
+                  <option value="website">Website</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="inquiringFor">Inquiring for</label>
+                <select name="inquiringFor" id="inquiring-for" class="form-control" required>
+                  <option value="">Please choose an option</option>
+                  <option value="grandparent">Grandparent</option>
+                  <option value="parent">Parent</option>
+                  <option value="myself">Myself</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <p>Would you like to receive a brochure?</p>
+                <div class="form-check form-check-inline">
+                  <input type="radio" class="form-check-input" name="brochure" id="brochureYes"
+                    value="I would like a brochure" />
+                  <label class="form-check-label" for="brochureYes">Yes</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input type="radio" class="form-check-input" name="brochure" id="brochureNo"
+                    value="No, I would not like a brochure" />
+                  <label class="form-check-label" for="brochureNo">No</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <p>Would you like to schedule a tour?</p>
+                <div class="form-check form-check-inline">
+                  <input type="radio" class="form-check-input" name="tour" id="tourYes"
+                    value="I would like to schedule a tour" />
+                  <label class="form-check-label" for="tourYes">Yes</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input type="radio" class="form-check-input" name="tour" id="tourNo"
+                    value="No, I would not like to schedule a tour" />
+                  <label class="form-check-label" for="tourNo">No</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="questions">Questions or Comments</label>
+                <textarea class="form-control" id="questions" name="questions" rows="3" required></textarea>
+              </div>
+              <button id="form-submit" type="submit" class="btn btn-block bg-carefield text-white">Send</button>
+              <div id="form-response" class="mt-4"></div>
+            </form>
+          </div>
+          <div class="col-md-5 text-center">
+            <img class="img-fluid" src="img/carefield-pleasanton-logo.svg" />
+            <p class="extra-height h5">19960 Santa Maria Ave.</p>
+            <p class="extra-height h5">Castro Valley, CA 94546</p>
+            <p class="extra-height h5"><a href="tel:510-582-2765">510-582-2765</a></p>
+            <p class="extra-height h5">RCFE#: 019200685</p>
+            <div class="embed-responsive embed-responsive-4by3">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3157.5881028498657!2d-121.87508258468505!3d37.682385279776376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fe91190be39b5%3A0xcd11a68dfe5a95a6!2s4115%20Mohr%20Ave%2C%20Pleasanton%2C%20CA%2094566!5e0!3m2!1sen!2sus!4v1582929655942!5m2!1sen!2sus"
+                width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col">
+        <div class="jumbotron jumbotron-fluid d-flex align-items-center" style="background-image: url('img/employment.jpg');background-position:center;background-size:cover;height:600px;">
+          <div class="container text-white p-4 text-center" style="background-color: rgba(0, 0, 0, 0.5);">
+            <p class="display-2">Employment Opportunities</p>
+            <p class="extra-height">Do you have what it takes? Come work with us at Carefield Castro Valley!</p>
+            <a target="_blank" href="https://eden-villa-castro-valley.oasisrecruit.com/"><button type="button" class="btn btn-lg btn-outline-light">See all employment opportunities</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{> scripts}}
+    <script type="text/javascript">
+      $('#contact-form').submit(function() {
+        event.preventDefault();
+        $('#form-response').html(`<div class="spinner-border" role="status"><span class="sr-only">Loading...</span></div>`);
+        var sanitize = function(input) {
+          return input.replace(/<(|\/|[^>\/bi]|\/[^>bi]|[^\/>][^>]+|\/[^>][^>]+)>/g, '');
+        }
+
+        var firstName = sanitize($('#first-name').val());
+        var lastName = sanitize($('#last-name').val());
+        var phone = sanitize($('#phone').val());
+        var email = sanitize($('#email').val());
+        var referralSource = sanitize($('#referral-source').val());
+        var inquiringFor = sanitize($('#inquiring-for').val());
+        var comments = sanitize($('#questions').val());
+        var brochure = sanitize($('input[name="brochure"]:checked').val());
+        var tour = sanitize($('input[name="tour"]:checked').val());
+
+        var request = $.ajax({
+          url: '/contact',
+          method: 'POST',
+          data: {
+            firstName: firstName,
+            lastName: lastName,
+            phone: phone,
+            fromEmail: email,
+            referralSource: referralSource,
+            inquiringFor: inquiringFor,
+            comments: comments,
+            brochure: brochure,
+            tour: tour,
+          },
+          timeout: 5000,
+          statusCode: {
+            400: function () {
+              $('#form-response').removeClass('alert-success').addClass('alert alert-danger');
+            },
+            200: function () {
+              $('#form-response').removeClass('alert-danger').addClass('alert alert-success');
+            }
+          }
+        });
+        request.done(function (msg) {
+          $('#form-response').html(msg);
+        });
+        request.fail(function (msg) {
+          $('#form-response').html('Something seems to have gone wrong with your request. Please contact us by phone');
+        })
+      });
+    </script>
+    {{> footer}}
+</body>
+</html>

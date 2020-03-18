@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+  {{> favicon}}
+  {{> css}}
+</head>
+
+<body>
+  {{> header}}
+  <!-- Carousel -->
+  <div class="container-fluid p-0">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="h-100"
+            style="background-image: url('img/hero-slide-1.jpg');background-position:50% 70%;background-size:cover;">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="h-100"
+            style="background-image: url('img/hero-slide-2.jpg');background-position:50% 30%;background-size:cover;">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="h-100"
+            style="background-image: url('img/hero-slide-3.jpg');background-position:50% 30%;background-size:cover;">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="h-100"
+            style="background-image: url('img/hero-slide-4.jpg');background-position:50% 40%;background-size:cover;">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- End Carousel -->
+  <!-- Body Content -->
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row my-4">
+        <div class="col text-center my-4">
+          <h1 class="display-2 my-4">Here We Are All Family</h1>
+          <p class="h5 extra-height">Welcome to Carefield Castro Valley, an assisted living and memory care senior living community in Castro Valley, California. Carefield
+            Castro Valley offers an engaging and varied lifestyle that empowers individuals to enjoy creative pursuits,
+            refine skills, revisit old hobbies, and discover new passions in a family environment.</p>
+          <p class="h5 extra-height mb-4">
+            Carefield Castro Valley recently underwent a multi-million dollar renovation that has reinvigorated the
+            community. With state-of-the-art programs, interesting and exciting activities, caring staff and plenty of
+            opportunities to engage with friends and family our community aspires to be a center for the enjoyment of
+            life.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{> footer}}
+  <!-- End Body Content -->
+  {{> scripts}}
+</body>
+
+</html>
