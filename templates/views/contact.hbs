@@ -29,23 +29,24 @@
                 <div class="col">
                   <div class="form-group">
                     <label for="firstName">First Name</label>
-                    <input type="text" class="form-control" id="first-name" name="firstName" required/>
+                    <input type="text" class="form-control" id="first-name" name="firstName" required />
                   </div>
                 </div>
                 <div class="col">
                   <div class="form-group">
                     <label for="lastName">Last Name</label>
-                    <input type="text" class="form-control" id="last-name" name="lastName" required/>
+                    <input type="text" class="form-control" id="last-name" name="lastName" required />
                   </div>
                 </div>
               </div>
               <div class="form-group">
                 <label for="phone">Phone</label>
-                <input type="tel" class="form-control" id="phone" name="phone" placeholder="xxx-xxx-xxxx" required/>
+                <input type="tel" class="form-control" id="phone" name="phone" placeholder="xxx-xxx-xxxx" required />
               </div>
               <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required/>
+                <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com"
+                  required />
               </div>
               <div class="form-group">
                 <label for="referralSource">How did you hear about us?</label>
@@ -109,15 +110,16 @@
             </form>
           </div>
           <div class="col-md-5 text-center">
-            <img class="img-fluid" src="img/carefield-pleasanton-logo.svg" />
+            <img class="img-fluid" src="img/carefield-castro-valley-logo.png" />
             <p class="extra-height h5">19960 Santa Maria Ave.</p>
             <p class="extra-height h5">Castro Valley, CA 94546</p>
             <p class="extra-height h5"><a href="tel:510-582-2765">510-582-2765</a></p>
             <p class="extra-height h5">RCFE#: 019200685</p>
             <div class="embed-responsive embed-responsive-4by3">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3157.5881028498657!2d-121.87508258468505!3d37.682385279776376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fe91190be39b5%3A0xcd11a68dfe5a95a6!2s4115%20Mohr%20Ave%2C%20Pleasanton%2C%20CA%2094566!5e0!3m2!1sen!2sus!4v1582929655942!5m2!1sen!2sus"
-                width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12627.205076964903!2d-122.077742!3d37.700866!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3923d6ae39d01c18!2sVilla%20at%20Castro%20Valley!5e0!3m2!1sen!2sus!4v1584637852540!5m2!1sen!2sus"
+                width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                tabindex="0"></iframe>
             </div>
           </div>
         </div>
@@ -125,21 +127,23 @@
     </div>
     <div class="row mt-4">
       <div class="col">
-        <div class="jumbotron jumbotron-fluid d-flex align-items-center" style="background-image: url('img/employment.jpg');background-position:center;background-size:cover;height:600px;">
+        <div class="jumbotron jumbotron-fluid d-flex align-items-center"
+          style="background-image: url('img/employment.jpg');background-position:center;background-size:cover;height:600px;">
           <div class="container text-white p-4 text-center" style="background-color: rgba(0, 0, 0, 0.5);">
             <p class="display-2">Employment Opportunities</p>
             <p class="extra-height">Do you have what it takes? Come work with us at Carefield Castro Valley!</p>
-            <a target="_blank" href="https://eden-villa-castro-valley.oasisrecruit.com/"><button type="button" class="btn btn-lg btn-outline-light">See all employment opportunities</button></a>
+            <a target="_blank" href="https://eden-villa-castro-valley.oasisrecruit.com/"><button type="button"
+                class="btn btn-lg btn-outline-light">See all employment opportunities</button></a>
           </div>
         </div>
       </div>
     </div>
     {{> scripts}}
     <script type="text/javascript">
-      $('#contact-form').submit(function() {
+      $('#contact-form').submit(function () {
         event.preventDefault();
         $('#form-response').html(`<div class="spinner-border" role="status"><span class="sr-only">Loading...</span></div>`);
-        var sanitize = function(input) {
+        var sanitize = function (input) {
           return input.replace(/<(|\/|[^>\/bi]|\/[^>bi]|[^\/>][^>]+|\/[^>][^>]+)>/g, '');
         }
 
@@ -187,4 +191,5 @@
     </script>
     {{> footer}}
 </body>
+
 </html>
