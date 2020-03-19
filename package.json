@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon src/app.js -e js,hbs,css",
-    "start": "pm2 src/app.js",
+    "start": "pm2 app.js",
     "stop": "pm2 stop all",
     "list": "pm2 list",
     "reload": "pm2 reload all",
