@@ -22,6 +22,12 @@ router.get('/photos', (req, res) => {
   });
 });
 
+router.get('/videos', (req, res) => {
+  res.render('videos.hbs', {
+    title: 'Videos',
+  });
+});
+
 router.get('/floor-plans', (req, res) => {
   res.render('floor-plans.hbs', {
     title: 'Floorplans',
