@@ -19,7 +19,7 @@ router.get('/', (req, res) => {
         "addressRegion": "CA",
         "postalCode": "94546",
         // eslint-disable-next-line comma-dangle
-        "streetAddress": "19960 Santa Maria Ave.",
+        "streetAddress": "19960 Santa Maria Ave."
       },
       "name": "Carefield Castro Valley",
       "url": "https://carefieldcastrovalley.com",
