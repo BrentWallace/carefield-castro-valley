@@ -6,7 +6,28 @@ const router = new express.Router();
 
 router.get('/', (req, res) => {
   res.render('index.hbs', {
-    title: 'Carefield Castro Valley',
+    title: 'Carefield Castro Valley Assisted Living & Memory Care',
+    description: 'Welcome to Carefield Castro Valley, an assisted living and memory care senior living community in Castro Valley, California. Carefield Castro Valley offers an engaging and varied lifestyle that empowers individuals to enjoy creative pursuits, refine skills, revisit old hobbies, and discover new passions in a family environment.',
+    jsonld: `{
+      "@context": "https://schema.org",
+      "@type": "localBusiness",
+      "image": "https://carefieldcastrovalley.com/img/hero-slide-1.jpg",
+      "logo":"https://carefieldcastrovalley.com/img/carefield-castro-valley-logo.png",
+      "address": {
+        "@type": "postalAddress",
+        "addressLocality": "Castro Valley",
+        "addressRegion": "CA",
+        "postalCode": "94546",
+        // eslint-disable-next-line comma-dangle
+        "streetAddress": "19960 Santa Maria Ave.",
+      },
+      "name": "Carefield Castro Valley",
+      "url": "https://carefieldcastrovalley.com",
+      // eslint-disable-next-line comma-dangle
+      "telephone": "+15105822765",
+    // eslint-disable-next-line comma-dangle
+      "sameAs": ["https://www.facebook.com/carefieldcastrovalley/"]
+    }`,
   });
 });
 
@@ -63,6 +84,11 @@ router.get('/sitemap.xml', (req, res) => {
   res.download(file);
 });
 
+router.get('/robots.txt', (req, res) => {
+  res.type('text/plain');
+  res.send('User-agent: *\nAllow: /*\nSitemap: https://carefieldcastrovalley.com/sitemap.xml')
+});
+
 router.get('/contact', (req, res) => {
   res.render('contact.hbs', {
     title: 'Contact Us',
@@ -85,7 +111,17 @@ router.post('/contact', [
     return res.status(400).send();
   }
   const toEmail = process.env.EMAIL_RECIPIENT.split(',');
-  const { fromEmail, firstName, lastName, phone, referralSource, inquiringFor, brochure, tour, comments } = req.body;
+  const {
+    fromEmail,
+    firstName,
+    lastName,
+    phone,
+    referralSource,
+    inquiringFor,
+    brochure,
+    tour,
+    comments,
+  } = req.body;
   const msg = {
     to: toEmail,
     from: fromEmail,
