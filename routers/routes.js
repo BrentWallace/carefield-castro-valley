@@ -18,14 +18,11 @@ router.get('/', (req, res) => {
         "addressLocality": "Castro Valley",
         "addressRegion": "CA",
         "postalCode": "94546",
-        // eslint-disable-next-line comma-dangle
         "streetAddress": "19960 Santa Maria Ave."
       },
       "name": "Carefield Castro Valley",
       "url": "https://carefieldcastrovalley.com",
-      // eslint-disable-next-line comma-dangle
       "telephone": "+15105822765",
-    // eslint-disable-next-line comma-dangle
       "sameAs": ["https://www.facebook.com/carefieldcastrovalley/"]
     }`,
   });
