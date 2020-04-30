@@ -30,30 +30,11 @@
       </div>
     </div>
     <div class="row" id="gallery" data-toggle="modal" data-target="#lightbox">
+      {{#each photos}}
       <div class="col-6 col-md-4 col-lg-3">
-        <img class="w-100 p-2" src="img/gallery/cv-gallery-0.jpg" data-target="#lightbox" data-slide-to="0" />
+        <img class="w-100 p-2" src="{{this.src}}" data-target="#lightbox" data-slide-to="{{@index}}" />
       </div>
-      <div class="col-6 col-md-4 col-lg-3">
-        <img class="w-100 p-2" src="img/gallery/cv-gallery-1.jpg" data-target="#lightbox" data-slide-to="1" />
-      </div>
-      <div class="col-6 col-md-4 col-lg-3">
-        <img class="w-100 p-2" src="img/gallery/cv-gallery-2.jpg" data-target="#lightbox" data-slide-to="2" />
-      </div>
-      <div class="col-6 col-md-4 col-lg-3">
-        <img class="w-100 p-2" src="img/gallery/cv-gallery-3.jpg" data-target="#lightbox" data-slide-to="3" />
-      </div>
-      <div class="col-6 col-md-4 col-lg-3">
-        <img class="w-100 p-2" src="img/gallery/cv-gallery-4.jpg" data-target="#lightbox" data-slide-to="4" />
-      </div>
-      <div class="col-6 col-md-4 col-lg-3">
-        <img class="w-100 p-2" src="img/gallery/cv-gallery-5.jpg" data-target="#lightbox" data-slide-to="5" />
-      </div>
-      <div class="col-6 col-md-4 col-lg-3">
-        <img class="w-100 p-2" src="img/gallery/cv-gallery-6.jpg" data-target="#lightbox" data-slide-to="6" />
-      </div>
-      <div class="col-6 col-md-4 col-lg-3">
-        <img class="w-100 p-2" src="img/gallery/cv-gallery-7.jpg" data-target="#lightbox" data-slide-to="7" />
-      </div>
+      {{/each}}
     </div>
   </div>
   <div class="modal fade" id="lightbox" tabindex="-1" role="dialog" aria-hidden="true">
@@ -67,40 +48,16 @@
         <div class="modal-body">
           <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
-              <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselIndicators" data-slide-to="1"></li>
-              <li data-target="#carouselIndicators" data-slide-to="2"></li>
-              <li data-target="#carouselIndicators" data-slide-to="3"></li>
-              <li data-target="#carouselIndicators" data-slide-to="4"></li>
-              <li data-target="#carouselIndicators" data-slide-to="5"></li>
-              <li data-target="#carouselIndicators" data-slide-to="6"></li>
-              <li data-target="#carouselIndicators" data-slide-to="7"></li>
+              {{#each photos}}
+              <li data-target="#carouselIndicators" data-slide-to="{{@index}}" {{#if @first}}class="active"{{/if}}></li>
+              {{/each}}
             </ol>
             <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="img/gallery/cv-gallery-0.jpg" class="d-block w-100" alt="...">
+              {{#each photos}}
+              <div class="carousel-item {{#if @first}}active{{/if}}">
+                <img src="{{this.src}}" class="d-block w-100" alt="...">
               </div>
-              <div class="carousel-item">
-                <img src="img/gallery/cv-gallery-1.jpg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="img/gallery/cv-gallery-2.jpg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="img/gallery/cv-gallery-3.jpg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="img/gallery/cv-gallery-4.jpg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="img/gallery/cv-gallery-5.jpg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="img/gallery/cv-gallery-6.jpg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="img/gallery/cv-gallery-7.jpg" class="d-block w-100" alt="...">
-              </div>
+              {{/each}}
             </div>
             <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>

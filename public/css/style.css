@@ -2,7 +2,7 @@
   background-color: #7bb1b2;
 }
 
-.carousel .carousel-item {
+#homeCarousel>.carousel-inner>.carousel-item {
   height:600px;
 }
 
