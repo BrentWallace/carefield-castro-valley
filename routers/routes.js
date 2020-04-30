@@ -36,7 +36,7 @@ router.get('/about', (req, res) => {
 
 router.get('/photos', (req, res) => {
   res.render('photos.hbs', {
-    title: 'Photo Gallery',
+    title: 'Community Photo Gallery',
     photos: [
       { src: '/img/gallery/cv-gallery-0.jpg' },
       { src: '/img/gallery/cv-gallery-1.jpg' },
