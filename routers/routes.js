@@ -39,7 +39,7 @@ router.get('/photos', (req, res) => {
     title: 'Community Photo Gallery',
     albums: [
       {
-        title: 'Carefield Castro Valley Community Photos',
+        title: '',
         target: 'carefield-castro-valley-community-photos',
         photos: [
           { src: '/img/gallery/cv-gallery-0.jpg' },
