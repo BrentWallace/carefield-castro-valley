@@ -23,21 +23,67 @@
 <body>
   <!-- #TODO Photo Gallery -->
   {{> header}}
-  <div class="container-fluid">
+  <div class="container">
     <div class="row">
       <div class="col text-center">
         <h1 class="display-3 m-4 p-4">{{title}}</h1>
       </div>
     </div>
-    <div class="row" id="gallery" data-toggle="modal" data-target="#lightbox">
-      {{#each photos}}
-      <div class="col-6 col-md-4 col-lg-3">
-        <img class="w-100 p-2" src="{{this.src}}" data-target="#lightbox" data-slide-to="{{@index}}" />
+    {{#each albums}}
+    <div class="row" data-toggle="modal" data-target="#{{this.target}}">
+      <div class="col-xs-12">
+        <h1>{{this.title}}</h1>
       </div>
-      {{/each}}
+      <div class="row">
+        {{#each photos}}
+        <div class="col-6 col-md-4 col-lg-3">
+          <img class="w-100 p-2" src="{{this.src}}" data-target="#{{../target}}" data-slide-to="{{@index}}" />
+        </div>
+        {{/each}}
+      </div>
     </div>
+    <div class="modal fade" id="{{this.target}}" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <p class="h5">{{this.title}}</p>
+            <button type="button" class="close" data-dismiss="modal" aria-label="close"><span
+                aria-hidden="true">&times;</span></button>
+          </div>
+          <div class="modal-body">
+            <div id="{{this.target}}-indicators" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                {{#each photos}}
+                <li data-target="#{{../target}}-indicators" data-slide-to="{{@index}}" {{#if @first}}class="active"
+                  {{/if}}></li>
+                {{/each}}
+              </ol>
+              <div class="carousel-inner">
+                {{#each photos}}
+                <div class="carousel-item {{#if @first}}active{{/if}}">
+                  <img class="d-block w-100" src="{{this.src}}" alt="{{this.alt}}" />
+                </div>
+                {{/each}}
+              </div>
+              <a class="carousel-control-prev" href="#{{this.target}}-indicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#{{this.target}}-indicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{/each}}
   </div>
-  <div class="modal fade" id="lightbox" tabindex="-1" role="dialog" aria-hidden="true">
+  <!--<div class="modal fade" id="lightbox" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-xl" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -74,7 +120,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div>-->
   {{> scripts}}
   {{> footer}}
 </body>

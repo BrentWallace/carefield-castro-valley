@@ -37,26 +37,44 @@ router.get('/about', (req, res) => {
 router.get('/photos', (req, res) => {
   res.render('photos.hbs', {
     title: 'Community Photo Gallery',
-    photos: [
-      { src: '/img/gallery/cv-gallery-0.jpg' },
-      { src: '/img/gallery/cv-gallery-1.jpg' },
-      { src: '/img/gallery/cv-gallery-2.jpg' },
-      { src: '/img/gallery/cv-gallery-3.jpg' },
-      { src: '/img/gallery/cv-gallery-4.jpg' },
-      { src: '/img/gallery/cv-gallery-5.jpg' },
-      { src: '/img/gallery/cv-gallery-6.jpg' },
-      { src: '/img/gallery/cv-gallery-7.jpg' },
+    albums: [
+      {
+        title: 'Carefield Castro Valley Community Photos',
+        target: 'carefield-castro-valley-community-photos',
+        photos: [
+          { src: '/img/gallery/cv-gallery-0.jpg' },
+          { src: '/img/gallery/cv-gallery-1.jpg' },
+          { src: '/img/gallery/cv-gallery-2.jpg' },
+          { src: '/img/gallery/cv-gallery-3.jpg' },
+          { src: '/img/gallery/cv-gallery-4.jpg' },
+          { src: '/img/gallery/cv-gallery-5.jpg' },
+          { src: '/img/gallery/cv-gallery-6.jpg' },
+          { src: '/img/gallery/cv-gallery-7.jpg' },
+        ],
+      },
     ],
   });
 });
 
 router.get('/photos/activities', (req, res) => {
   res.render('photos.hbs', {
-    title: 'Activities Photo Gallery',
-    photos: [
-      { src: '/img/activities/EasterCV.jpg' },
-      { src: '/img/activities/CVEaster2.jpg' },
-      { src: '/img/activities/CVwindow.jpg' },
+    title: 'Activities Photo Galleries',
+    albums: [
+      {
+        title: 'Test Album 1',
+        target: 'test-album-1-lightbox',
+        photos: [
+          { src: '/img/activities/EasterCV.jpg', alt: '' },
+          { src: '/img/activities/CVEaster2.jpg', alt: '' },
+        ],
+      },
+      {
+        title: 'Test Album 2',
+        target: 'test-album-2-lightbox',
+        photos: [
+          { src: '/img/activities/CVEaster2.jpg', alt: '' },
+        ],
+      },
     ],
   });
 });
@@ -64,8 +82,14 @@ router.get('/photos/activities', (req, res) => {
 router.get('/photos/dining', (req, res) => {
   res.render('photos.hbs', {
     title: 'Dining Photo Gallery',
-    photos: [
-      { src: '/img/dining/CVEaster8.jpg' },
+    albums: [
+      {
+        title: 'Carefield Castro Valley Dining Photos',
+        target: 'carefield-castro-valley-dining-photos',
+        photos: [
+          { src: '/img/dining/CVEaster8.jpg' },
+        ],
+      },
     ],
   });
 });
