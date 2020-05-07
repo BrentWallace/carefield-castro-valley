@@ -130,6 +130,12 @@ router.get('/covid-19', (req, res) => {
   });
 });
 
+router.get('/testimonials', (req, res) => {
+  res.render('testimonials.hbs', {
+    title: 'Family Testimonials',
+  });
+});
+
 router.get('/sitemap.xml', (req, res) => {
   const file = `${__dirname}/../public/sitemaps/sitemap.xml`;
   res.download(file);
