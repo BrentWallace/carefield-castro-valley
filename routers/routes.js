@@ -41,6 +41,7 @@ router.get('/photos', (req, res) => {
       {
         title: '',
         target: 'carefield-castro-valley-community-photos',
+        description: '',
         photos: [
           { src: '/img/gallery/cv-gallery-0.jpg' },
           { src: '/img/gallery/cv-gallery-1.jpg' },
@@ -61,17 +62,11 @@ router.get('/photos/activities', (req, res) => {
     title: 'Activities Photo Galleries',
     albums: [
       {
-        title: 'Test Album 1',
-        target: 'test-album-1-lightbox',
+        title: 'Residents Communicating with their Loved Ones',
+        target: 'loved-ones',
+        description: '',
         photos: [
-          { src: '/img/activities/EasterCV.jpg', alt: '' },
-          { src: '/img/activities/CVEaster2.jpg', alt: '' },
-        ],
-      },
-      {
-        title: 'Test Album 2',
-        target: 'test-album-2-lightbox',
-        photos: [
+          { src: '/img/activities/CVWindow.jpg', alt: '' },
           { src: '/img/activities/CVEaster2.jpg', alt: '' },
         ],
       },
