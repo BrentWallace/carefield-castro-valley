@@ -24,8 +24,23 @@
       </div>
     </div>
     <div class="row my-4">
-      <div class="col">
-        <div class="card">
+      {{#each yelpReviews}}
+      <div class="col-md-6">
+        <div class="card mb-4">
+          <div class="card-body">
+            <blockquote class="blockquote">
+              {{this.text}}
+            </blockquote>
+            
+          </div>
+          <div class="card-footer d-flex align-items-center">
+            <img class="rounded mr-2" src="{{this.photo}}" /><span class="text-muted">- {{this.name}}</span><img class="ml-auto mt-1 mr-2" src="/img/yelp/yelp_stars_5.png" /><a href="{{this.link}}" target="_blank"><img src="/img/yelp/yelp_outline.png" /></a>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+      <div class="col-md-6">
+        <div class="card mb-4">
           <div class="card-body">
             <blockquote class="blockquote">
               <p>I just want to take the time to thank you and the Carefield staff for your diligence and care rendered
@@ -42,11 +57,14 @@
                 least
                 I can see she is doing well.</p>
               <p>Blessings to you and the great Carefield staff – please know that you are appreciated. </p>
-              <footer class="blockquote-footer font-weight-bold font-italic">Chuck Nelson</footer>
             </blockquote>
           </div>
+          <div class="card-footer"><span class="text-muted">- Chuck N.</span></div>
         </div>
       </div>
+    </div>
+    <div class="row my-4">
+      
     </div>
   </div>
   {{> scripts}}

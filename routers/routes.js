@@ -139,6 +139,32 @@ router.get('/covid-19', (req, res) => {
 router.get('/testimonials', (req, res) => {
   res.render('testimonials.hbs', {
     title: 'Family Testimonials',
+    yelpReviews: [
+      {
+        name: 'Jonathan D.',
+        photo: '/img/yelp/jonathan-d.jpg',
+        text: 'Kathy the RN at the facility is great . Really responsive, caring , and does what\'s in the best of the patients and families. I\'ve witnessed Kathy make a impact with staff creating bonds which fosters great teamwork in the community .',
+        link: 'https://www.yelp.com/biz/carefield-castro-valley-assisted-living-and-memory-care-castro-valley-4?hrid=Ta8JyUErABSl7nBjB7vizg&utm_campaign=www_review_share_popup&utm_medium=copy_link&utm_source=(direct)',
+      },
+      {
+        name: 'Erick C.',
+        photo: '',
+        text: 'Finding the right place for my grandpa was not easy but ever since we met Parveen Singh I knew this was the right place for him. From answering all our questions to making the transition smooth, Parveen went above and beyond. The Castro Valley location is clean and nice and after meeting her there\'s no doubt in my mind now that we picked the right place.',
+        link: 'https://www.yelp.com/biz/carefield-castro-valley-assisted-living-and-memory-care-castro-valley-4?hrid=7C2k2lg0dVQ3As6e_hqwXw&utm_campaign=www_review_share_popup&utm_medium=copy_link&utm_source=(direct)',
+      },
+      {
+        name: 'Darrah J.',
+        photo: '/img/yelp/darrah-j.jpg',
+        text: 'Both my grandmothers were residents at "The Villa" in Castro Valley. Over the years, our family has witnessed The Villa go through many changes, and through ups and downs. The Villa is currently under the leadership of Parveen Singh, who has completely turned around the management and made The Villa a safe, wonderful, engaging place for the residents who live there and their families. The facility is clean and the residents are cared for appropriately. Parveen, as well as the lead RN Kathy, are incredible professionals who have improved The Villa to become the best I\'ve seen it in over a decade. They are wonderful leaders in The Villa community and I am forever appreciative of them making my grandmother\'s last days as comfortable as possible. There are so many names that I am so grateful for. Parveen and Kathy, also Christie, MaryKay, Doreen, the list goes on. They provided, and continue to provide, compassionate, respectful care to her and to my family and I am forever grateful. I would not have recommended The Villa a few years ago, but with these improvements and changes in leadership and management, I would absolutely recommend The Villa now. Thank you all at The Villa.',
+        link: 'https://www.yelp.com/biz/carefield-castro-valley-assisted-living-and-memory-care-castro-valley-4?hrid=PiJLwP7syGGkCmBLbNGarg&utm_campaign=www_review_share_popup&utm_medium=copy_link&utm_source=(direct)',
+      },
+      {
+        name: 'CJ G.',
+        photo: '',
+        text: 'My experience with The Villa has been fantastic. (My understanding is that The Villa has been under new management for 9 months and really is not the same as "Eden Villa," which is what many of these reviews are about.) I checked out four Assisted Living and Memory Care facilities in Castro Valley, San Leandro, and Oakland and this one was my favorite. The new executive director, Parveen, is excellent. She understands the complex line to walk between keeping elders (particularly those with MCI or dementia) safe, while maintaining their dignity. As I toured the place, Parveen said hello to each staff member and resident by name. The staff members introduced themselves to me as we walked by. It was a warm culture that I think is difficult to fake. Christie, at the front desk, was also kind. One morning, on thirty minutes\' notice, they managed to re-arrange schedules so that Parveen could give me and my mom a "tour" via video chat to help my mom make her decision about where to move. My mom decided not to move to CA, but if she had, or if she does in the future, this is where we\'ll go.',
+        link: 'https://www.yelp.com/biz/carefield-castro-valley-assisted-living-and-memory-care-castro-valley-4?hrid=aT0DKmF6ovfPeC-RobvbOg&utm_campaign=www_review_share_popup&utm_medium=copy_link&utm_source=(direct)',
+      },
+    ],
   });
 });
 
