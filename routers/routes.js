@@ -66,7 +66,7 @@ router.get('/photos/activities', (req, res) => {
         target: 'loved-ones',
         description: '',
         photos: [
-          { src: '/img/activities/CVWindow.jpg', alt: '' },
+          { src: '/img/activities/CVwindow.jpg', alt: '' },
           { src: '/img/activities/CVEaster2.jpg', alt: '' },
         ],
       },
