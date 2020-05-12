@@ -70,6 +70,17 @@ router.get('/photos/activities', (req, res) => {
           { src: '/img/activities/CVEaster2.jpg', alt: '' },
         ],
       },
+      {
+        title: 'Holiday Celebrations',
+        target: 'holiday-celebrations',
+        description: '',
+        photos: [
+          { src: '/img/activities/holiday/CVHoliday1.jpg', alt: '' },
+          { src: '/img/activities/holiday/CVHoliday2.jpg', alt: '' },
+          { src: '/img/activities/holiday/CVHoliday3.jpg', alt: '' },
+          { src: '/img/activities/holiday/CVHoliday4.jpg', alt: '' },
+        ],
+      },
     ],
   });
 });
