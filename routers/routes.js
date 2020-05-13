@@ -64,7 +64,7 @@ router.get('/photos/activities', (req, res) => {
       {
         title: 'Residents Communicating with their Loved Ones',
         target: 'loved-ones',
-        description: '',
+        description: 'We are helping families connect with their loved ones during these challenging times.',
         photos: [
           { src: '/img/activities/CVwindow.jpg', alt: '' },
           { src: '/img/activities/CVEaster2.jpg', alt: '' },
