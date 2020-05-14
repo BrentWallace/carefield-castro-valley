@@ -59,7 +59,7 @@ router.get('/photos', (req, res) => {
 
 router.get('/photos/activities', (req, res) => {
   res.render('photos.hbs', {
-    title: 'Activities Photo Galleries',
+    title: 'Activities Photo Gallery',
     albums: [
       {
         title: 'Residents Communicating with their Loved Ones',
