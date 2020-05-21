@@ -91,7 +91,7 @@ router.get('/photos/dining', (req, res) => {
     description: 'Our culinary team at Carefield Castro Valley Assisted Living & Memory Care is committed to providing a nurturing and satisfying dining experience for our residents. Always having our residents well-being and care in mind, our meals are prepared with fresh and flavorful ingredients with dining options and choices.',
     albums: [
       {
-        title: '',
+        title: 'Restaurant Style Dining',
         target: 'carefield-castro-valley-dining-photos',
         photos: [
           { src: '/img/dining/CVEaster8.jpg', alt: '' },
